@@ -1,15 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import BackToTop from '../components/BackToTop.svelte';
 ---
-
 <Layout title="Welcome to Astro.">
-	<main class="flex flex-col">
-		<div class="flex flex-row gap-4 m-16 justify-center">
-			<div class="transition-all hover:scale-[1.03] rounded-3xl bg-[#3838fc] h-auto w-64 aspect-square"><img src="../OICw.webp" class="scale-[0.6]"/></div>
-			<div class="transition-all hover:scale-[1.03] rounded-3xl bg-white h-auto w-[32rem] flex"><img src="../oic_logo_landscape.webp" class="scale-75 object-scale-down"/></div>
-			<div class="transition-all hover:scale-[1.03] rounded-3xl bg-[#1e1e1e] h-auto w-64 aspect-square"></div>
-		</div>
-
-		
-	</main>
+    <main class="flex flex-col">
+        <Header />
+        <div class="flex flex-col bg-[#191970] h-svh p-16 justify-end" id="landing">
+            <div class="flex flex-col h-2/3 justify-between">
+                <div class="flex flex-col text-white gap-4 w-fit">
+                    <h1 class="text-9xl">Brand<br>Guidelines</h1>
+                    <hr class="">
+                    <div class="ml-2 text-2xl">October 2024</div>
+                </div>
+                <div class="h-16 flex justify-center items-center">
+                    <a class="btn btn-outline btn-md hover:bg-white text-white text-lg" href="#start">
+                        get started
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+							<path fill-rule="evenodd" d="M8 2a.75.75 0 0 1 .75.75v8.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.22 3.22V2.75A.75.75 0 0 1 8 2Z" clip-rule="evenodd" />
+						</svg>								   
+					</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col h-svh p-16 justify-end" id="start">
+        </div>
+    </main>
+    <BackToTop client:load/>
 </Layout>

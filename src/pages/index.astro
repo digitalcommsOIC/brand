@@ -5,12 +5,14 @@ import BackToTop from '../components/BackToTop.svelte';
 ---
 <Layout title="Welcome to Astro.">
     <main class="flex flex-col">
+
         <Header />
+
         <div class="flex flex-col bg-[#191970] h-svh p-16 justify-end" id="landing">
             <div class="flex flex-col h-2/3 justify-between">
                 <div class="flex flex-col text-white gap-4 w-fit">
                     <h1 class="text-9xl">Brand<br>Guidelines</h1>
-                    <hr class="">
+                    <hr/>
                     <div class="ml-2 text-2xl">October 2024</div>
                 </div>
                 <div class="h-16 flex justify-center items-center">
@@ -23,8 +25,29 @@ import BackToTop from '../components/BackToTop.svelte';
                 </div>
             </div>
         </div>
-        <div class="flex flex-col h-svh p-16 justify-end" id="start">
+
+        <div class="flex flex-col h-svh p-16 justify-between" id="start">
+			<div class="flex flex-col text-black gap-4 w-fit">
+				<h1 class="text-9xl">what is a<br>brand?</h1>
+				<hr class="w-1/2"/>
+				<div class="flex flex-col text-2xl w-1/2">
+					<p class="mb-4">A brand is more than just a logo - it’s how people feel about us. It’s our identity, our values, and the experience we offer.</p>
+					<li><span class="font-medium">Visual Identity</span>: Logos, colors, fonts</li>
+					<li><span class="font-medium">Tone</span>: How we communicate with our audience</li>
+					<li><span class="font-medium">Experience</span>: How our customers feel about us</li>
+					<li><span class="font-medium">Values</span>: What we stand for and how we show it</li>
+				</div>
+			</div>
+			<div class="h-16 flex justify-center items-center">
+				<a class="btn btn-outline btn-md hover:bg-black hover:text-white text-black text-lg" href="#start">
+					continue
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+						<path fill-rule="evenodd" d="M8 2a.75.75 0 0 1 .75.75v8.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.22 3.22V2.75A.75.75 0 0 1 8 2Z" clip-rule="evenodd" />
+					</svg>								   
+				</a>
+			</div>
         </div>
+
     </main>
     <BackToTop client:load/>
 </Layout>
